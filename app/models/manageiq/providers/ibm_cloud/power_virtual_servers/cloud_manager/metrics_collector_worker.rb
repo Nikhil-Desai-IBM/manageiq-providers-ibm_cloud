@@ -4,4 +4,8 @@ class ManageIQ::Providers::IbmCloud::PowerVirtualServers::CloudManager::MetricsC
   def friendly_name
     @friendly_name ||= "C&U Metrics Collector for IBM PowerVS"
   end
+
+  def self.abbreviated_class_name
+    super.sub("PowerVirtualServers", "Powervs")
+  end
 end
